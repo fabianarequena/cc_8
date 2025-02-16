@@ -61,3 +61,14 @@ console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Pay
  
 // Here we created a function to see the total payment for a loan including interest over a given period
 
+
+// Task 6: Identifying Large Transactions
+
+function filterLargeTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+let transactions = [200, 1500, 3200, 800, 2500];
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // Expected output: [1500, 3200, 2500]
+
+// Here we essentially are using filters to see transactions above a specified amount using a higher-order function
+
