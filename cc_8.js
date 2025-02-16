@@ -72,3 +72,20 @@ console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // 
 
 // Here we essentially are using filters to see transactions above a specified amount using a higher-order function
 
+
+// Task 7: Shopping Cart Tracker
+
+function createCartTracker() {
+    let total = 0;
+    return function(amount) {
+        total += amount;
+        return `Total Cart Value: $${total}`;
+    };
+}
+let cart = createCartTracker();
+console.log(cart(20)); // Expected output: "Total Cart Value: $20"
+console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+
+// Here we created a function that returns another function that maintains a total of the cart value in $
+
+
