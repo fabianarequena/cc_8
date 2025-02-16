@@ -89,3 +89,14 @@ console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 // Here we created a function that returns another function that maintains a total of the cart value in $
 
 
+// Task 8: Savings Growth Projection
+
+function calculateSavings(years, amount) {
+    if (years === 0 || years > 10) return `Projected Savings: $${amount.toFixed(2)}`;
+    return calculateSavings(years - 1, amount * 1.05);
+}
+console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
+console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $6381.41"
+
+// Here we are using a recursive function to calculate the projected savings growth by increasing the amount by 5% each year, up to 10 years only
+
